@@ -83,4 +83,4 @@ tidy_dataset <- dataset %>%
     summarize_all(mean)
 
 
-fwrite(x = tidy_dataset, file = "tidyData.txt", quote = FALSE)
+write.table(tidy_dataset, file = "tidyData.txt", row.names = FALSE, quote = FALSE)
