@@ -20,6 +20,13 @@ For each record in the dataset it is provided:
 * Its activity label.
 * An identifier of the subject who carried out the experiment.
 
+```{r tidy_dataset, echo=FALSE}
+library(data.table)
+tidy <- fread(file = "./tidyData.txt")
+m = data.frame(lapply(tidy, typeof))
+print(m)
+```
+
 ## Data Analysis
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
